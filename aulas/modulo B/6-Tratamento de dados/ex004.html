@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando novas formatações</title>
+    <style>
+        body{
+            font: normal 3em arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //Para strings
+        let nome = prompt('Qual é o seu nome')
+        document.write(`<h2>Olá ${nome}!, Seu nome tem ${nome.length} letras</h2>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br><br>`)
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br><br>`)
+
+        //Para números
+        let n1 = 1555.5
+        document.write('Formatação de números<br><br>')
+        document.write('Para duas casas decimais no final ' + n1.toFixed(2) + '<br><br>')
+        document.write('Para subtituir o ponto pela vírgula' + n1.toFixed(2).replace('.', ',')  + '<br><br>')
+        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'} ) + ' para valor em reais' + '<br><br>')
+        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) + 'para valor em dolar'+ '<br><br>')
+        document.write(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})+' para valor em euro'+ '<br><br>')
+    </script>
+</body>
+</html>
