@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos no DOM</title>
+  <style>
+    div#div{
+      background-color: green;
+      color: white;
+      font-size: 1.5em;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="div" onclick="clicar()">
+    Interaja...
+  </div>
+  <script>
+    let a = document.getElementById('div')
+    function clicar(){
+      a.innerText = 'Clicou'
+      a.style.backgroundColor = 'red'
+    }
+
+    a.addEventListener('mouseenter', enter)
+    function enter(){
+      a.innerText = 'Entrou'
+      a.style.backgroundColor = 'blue'
+    }
+
+    a.addEventListener('mouseout', saiu)
+    function saiu(){
+      a.innerText = 'Saiu'
+      a.style.backgroundColor = 'purple'
+    }
+  </script>
+</body>
+</html>

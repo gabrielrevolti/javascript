@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidades</title>
+  <style>
+    body{
+      font: normal 1.5em arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nacionalidade</h1>
+  <label for="pais">Qual é seu país?</label>
+  <input type="text" name="pais" id="pais">
+  <button id="button">Verificar</button>
+  <div id="div">
+  </div>
+
+  <script>
+    let button = document.getElementById('button')
+    button.addEventListener('click', clicar)
+
+    function clicar(){
+      let div = document.getElementById('div')
+      let pais = document.getElementById('pais').value
+      if(pais == 'Brasil'){
+        div.innerHTML = `<p>Você é <strong>brasileiro</strong>!`
+      }else{
+        div.innerHTML += `você é estrangeiro!`
+      }
+    }
+  </script>
+</body>
+</html>

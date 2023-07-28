@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeiros passos com DOM</title>
+  <style>
+    body{
+      background-color: rgb(59, 59, 214);
+      color: white;
+      font: normal 1.5em arial;      
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciando estudos com DOM</h1>
+  <h2 id="msg">Testando funcionalidades</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aliquid?</p>
+  <p>Lorem ipsum dolor sit amet.</p>
+
+  <script>
+    let n = document.getElementsByTagName('p')[0]
+    document.write('está escrito: ' + n.innerText)
+    n.style.color = 'blue'
+    document.body.style.background = 'black'
+    d = document.querySelector('h2#msg')
+    d.style.background = 'blue'
+  </script>
+</body>
+</html>

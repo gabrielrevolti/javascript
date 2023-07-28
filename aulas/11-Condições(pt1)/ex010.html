@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de velocidade</title>
+</head>
+<body>
+  <h1>Radar</h1>
+  <label for="vel">Qual sua velocidade?</label>
+  <input type="number" id="vel">
+  <button id="button" onclick="clicar()">Verificar</button>
+
+  <div id="div"></div>
+
+  <script>
+    function clicar(){
+      let vel = document.getElementById('vel').value
+      let div = document.getElementById('div')
+      div.innerHTML = `<p>O seu carro está nesta velocidade <strong>${vel} km/h</strong></p>`
+      if(vel > 60){
+        div.innerHTML += `<strong>${vel}</strong>km/h excedeu o limite de velocidade. Multado!`
+      }else{
+       div.innerHTML += `<p>A velocidade <strong>${vel}</strong>km/h está de acordo com as normas de segurança</p>`
+      }
+      div.innerHTML += `<p>Dirija sempre com o sinto de segurança!</p>`
+    }
+  </script>
+</body>
+</html>
