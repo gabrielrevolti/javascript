@@ -29,7 +29,7 @@ function verificar(){
       }
     }else if(fsex[1].checked){
       genero = 'Mulher'
-      document.body.style.backgroundColor = '#B6A2FC'
+      document.body.style.backgroundColor = '#DA53FA'
       if(idade >=0 && idade < 10){
         //criança
         img.src = 'imagens/crianca_mulher.jpg'
